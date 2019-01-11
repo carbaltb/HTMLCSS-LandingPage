@@ -11,11 +11,12 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }*/
 /*To center content in the body of the page we'll need to create a container that is positioned and styled in CSS and then this class will be applied to several HTML elements in our index.html*/
 .container { margin: 0 auto; max-width: 1170px; }
 section { display: flex; }
+.flex { display: flex; }
 .flex-column { flex-direction: column; }
 .flex-one { flex: 1; }
 /*Ajusta posicion de alineacion de elementos individuales en el flex container*/
 .align-center { align-items: center; }
-.center { justify-content: : content; }
+.center { justify-content: center; }
 .space-between { justify-content: space-between; }
 /*Button consistent feel*/
 .btn {
