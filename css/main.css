@@ -111,7 +111,7 @@ section { display: flex; }
   font-size: 21px;
   margin: 0 0 10px;
 }
-/*Sales Banner & Categories style */
+/*Sales Banner style */
 .banner {
   margin: 55px 15px;
   width: 100%;
@@ -132,6 +132,7 @@ section { display: flex; }
   font-weight: 400;
   margin-top: 5px;
 }
+ /*Categories style */
 .category { flex: 0 0 25%; padding: 0 15px; }
 .category img { width: 100% }
 .category-text {
@@ -149,4 +150,70 @@ section { display: flex; }
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
+}
+ /*Full Banner video*/
+ .full-banner {
+   padding: 0 15px;
+   margin: 50px 0px;
+   position: relative;
+ }
+.full-banner:before {  /* border style*/
+  content: ""; /*no anyade nada, solo el estilo*/
+  position: absolute; /*ya que en full-banner es relative*/
+  border: 1px solid #ffffff;
+  top: 30px;
+  bottom: 30px;
+  left: 50px;
+  right: 50px;
+  z-index: 1;
+}
+/*La imagen del banner ocupa el 60%*/
+.full-banner-image {
+  flex: 0 0 58.333333%;
+  background-image: url('../img/vista.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 400px;
+}
+/*El texto del banner esta a la derecha y ocupa el 40%*/
+.full-banner-sidebar {
+  flex: 0 0 41.666667%;
+  background-color: #364147;
+  text-transform: uppercase;
+  padding: 30px;
+  color: #ffffff;
+}
+.full-banner-sidebar h4 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #637f94;
+  font-style: italic;
+  line-height: 1;
+}
+/*Decorate element after the heading*/
+.full-banner-sidebar h4:after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #faa541;
+  margin: 20px auto;
+  display: block;
+}
+/*Properties for the text below the heading*/
+.full-banner-sidebar > div:nth-of-type(1) { /*Selects the first div inside the bar*/
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+}
+.full-banner-sidebar > div:nth-of-type(2) { /*Selects the second div inside the bar*/
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+/*Styles the bottom in the side bar*/
+.full-banner-sidebar .btn.btn-default {
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1; /*makes sure the bottom is first in the stacking order*/
 }
